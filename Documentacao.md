@@ -29,24 +29,17 @@ Utilizando jargões técnicos, o programa pode ser descrito como um pipeline de 
 # Capítulo 3
 ### Requisitos do produto. 
 
-RNF
-O sistema deve ser composto de uma interface gráfica minimalista, que remete a sistema “antigos”
-RF
-O sistema deve permitir que o usuário carregue um arquivo em formato de imagem
-RF
-O sistema deve processar a imagem e gerar um texto simbólico
-RNF
-O sistema deve estabelecer um nível visualmente agradável e “mágico” e tecnicamente coeso durante o processo de transformação da imagem
-RNF
-O sistema deve estabelecer um período de tempo razoável e aleatório, mas não ultrapassando mais de 5 minutos, durante o processo
-RNF
-O sistema deve disponibilizar a saída textual na tela na forma de uma animação tênue e compassada, possibilitando uma absorção dinâmica do texto pelo usuário
-RNF
-O sistema deve retornar um texto aleatório, com base na análise dos tons da imagem e suas respectivas inferências com a GLC
-RF
-O sistema deve permitir as opções de salvar a saída gerada, e então nomeá-la, ou simplesmente descartá-la.
-RF
-O sistema deve permitir a navegação pela “biblioteca” de textos salvos, assim como a capacidade de repetidas vezes revisitar o processo de geração da imagem até a saída textual
+|Requisito|Descrição|
+|---------|---------|
+|RNF|O sistema deve ser composto de uma interface gráfica minimalista, que remete a sistema “antigos”|
+|RF |O sistema deve permitir que o usuário carregue um arquivo em formato de imagem|
+|RF |O sistema deve processar a imagem e gerar um texto simbólico|
+|RNF|O sistema deve estabelecer um nível visualmente agradável e “mágico” e tecnicamente coeso durante o processo de transformação da imagem|
+|RNF|O sistema deve estabelecer um período de tempo razoável e aleatório, mas não ultrapassando mais de 5 minutos, durante o processo|
+|RNF|O sistema deve disponibilizar a saída textual na tela na forma de uma animação tênue e compassada, possibilitando uma absorção dinâmica do texto pelo usuário|
+|RNF|O sistema deve retornar um texto aleatório, com base na análise dos tons da imagem e suas respectivas inferências com a GLC|
+|RF |O sistema deve permitir as opções de salvar a saída gerada, e então nomeá-la, ou simplesmente descartá-la.|
+|RF |O sistema deve permitir a navegação pela “biblioteca” de textos salvos, assim como a capacidade de repetidas vezes revisitar o processo de geração da imagem até a saída textual|
 
 # Capítulo 4 
 ### Wireframes
@@ -55,16 +48,18 @@ O sistema deve permitir a navegação pela “biblioteca” de textos salvos, as
 ### Modelagem “leve do sistema”.
 
 Casos de Uso
-UC01: Carregar uma imagem
-UC02: Acionar etapa de processamento
-UC03: Salvar processo gerado
-UC04: Descartar processo gerado
-UC05: Nomear processo salvo
-UC06: Navegar pela biblioteca de processos salvos
-UC07: Agrupar processos salvos
-UC08: Mover processo salvo para dentro de uma pasta
-UC09: Remover processo salvo de dentro de uma pasta
-UC10: Excluir um processo salvo da biblioteca
+|Numero |Caso de Uso|
+|----|----|
+|UC01|Carregar uma imagem|
+|UC02|Acionar etapa de processamento|
+|UC03|Salvar processo gerado|
+|UC04|Descartar processo gerado|
+|UC05|Nomear processo salvo|
+|UC06|Navegar pela biblioteca de processos salvos|
+|UC07|Agrupar processos salvos|
+|UC08|Mover processo salvo para dentro de uma pasta|
+|UC09|Remover processo salvo de dentro de uma pasta|
+|UC10|Excluir um processo salvo da biblioteca|
 
 # Capítulo 6: 
 ### Descrição da arquitetura do sistema (modelo) e das ferramentas que serão utilizadas (linguagem de programação, frameworks, etc).
