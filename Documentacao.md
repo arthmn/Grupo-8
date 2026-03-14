@@ -50,16 +50,11 @@ Utilizando jargões técnicos, o programa pode ser descrito como um pipeline de 
 Casos de Uso
 |Numero |Caso de Uso|
 |----|----|
-|UC01|Carregar uma imagem|
-|UC02|Acionar etapa de processamento|
-|UC03|Salvar processo gerado|
-|UC04|Descartar processo gerado|
-|UC05|Nomear processo salvo|
-|UC06|Navegar pela biblioteca de processos salvos|
-|UC07|Agrupar processos salvos|
-|UC08|Mover processo salvo para dentro de uma pasta|
-|UC09|Remover processo salvo de dentro de uma pasta|
-|UC10|Excluir um processo salvo da biblioteca|
+|UC01|Carregar imagem|
+|UC02|Processar imagem|
+|UC03|Exportar resultado|
+|UC04|Descartar resultado|
+|UC05|Novo processamento|
 
 # Capítulo 6: 
 ### Descrição da arquitetura do sistema (modelo) e das ferramentas que serão utilizadas (linguagem de programação, frameworks, etc).
