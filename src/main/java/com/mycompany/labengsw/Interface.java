@@ -6,7 +6,6 @@ package com.mycompany.labengsw;
 
 import java.awt.Color;
 import java.io.*;
-import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 
 /**
@@ -111,7 +110,6 @@ public class Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bttnCarregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnCarregarActionPerformed
-        // TODO add your handling code here:
         JFileChooser fc = new JFileChooser();
         fc.addChoosableFileFilter(new ImageFilter());
         fc.setAcceptAllFileFilterUsed(false);
