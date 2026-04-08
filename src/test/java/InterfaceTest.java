@@ -73,7 +73,7 @@ public class InterfaceTest {
     @Test
     public void focarBotao() {
         window.button("Carregar").requireFocused();
-        File file = new File("C:\\Users\\Arthur\\Documents\\Mackenzie\\6º Semestre\\Lab de Engenharia de Software\\Projeto\\LabEngSw\\src\\test\\java\\imagem.jpg");
+        File file = new File("src/test/java/imagem.jpg");
         window.button("Carregar").click();
         JFileChooserFixture fileChooser = JFileChooserFinder.findFileChooser().using(window.robot());
         fileChooser.selectFile(file);
