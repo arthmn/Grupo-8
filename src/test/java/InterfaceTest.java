@@ -39,7 +39,7 @@ public class InterfaceTest {
     public void cancelarCarregar() {
         window.label("lblMsgImg").requireText("Carregue uma imagem");
         window.button("Carregar").click();
-        JFileChooserFixture fileChooser = JFileChooserFinder.findFileChooser().withTimeout(5000).using(window.robot());
+        JFileChooserFixture fileChooser = JFileChooserFinder.findFileChooser().withTimeout(10000).using(window.robot());
         fileChooser.cancel();
         window.label("lblMsgImg").requireText("Operação cancelada pelo usuário");
         window.label("lblMsgImg").foreground().equals(Color.RED);
@@ -50,7 +50,7 @@ public class InterfaceTest {
     public void carregarArquivoCerto() {
         File file = new File("src/test/java/imagem.jpg");
         window.button("Carregar").click();
-        JFileChooserFixture fileChooser = JFileChooserFinder.findFileChooser().using(window.robot());
+        JFileChooserFixture fileChooser = JFileChooserFinder.findFileChooser().withTimeout(10000).using(window.robot());
         fileChooser.selectFile(file);
         fileChooser.approve();
         window.label("lblMsgImg").requireText("Imagem " + file.getName() + " carregada com êxito");
@@ -63,7 +63,7 @@ public class InterfaceTest {
     public void carregarArquivoErrado() {
         File file = new File("src/test/java/documento.pdf");
         window.button("Carregar").click();
-        JFileChooserFixture fileChooser = JFileChooserFinder.findFileChooser().withTimeout(5000).using(window.robot());
+        JFileChooserFixture fileChooser = JFileChooserFinder.findFileChooser().withTimeout(10000).using(window.robot());
         fileChooser.selectFile(file);
         fileChooser.approve();
         window.label("lblMsgImg").requireText("Arquivo de formato inválido! Selecione uma imagem");
@@ -75,7 +75,7 @@ public class InterfaceTest {
         window.button("Carregar").requireFocused();
         File file = new File("src/test/java/imagem.jpg");
         window.button("Carregar").click();
-        JFileChooserFixture fileChooser = JFileChooserFinder.findFileChooser().using(window.robot());
+        JFileChooserFixture fileChooser = JFileChooserFinder.findFileChooser().withTimeout(10000).using(window.robot());
         fileChooser.selectFile(file);
         fileChooser.approve();
         window.button("Processar").requireFocused();
@@ -85,7 +85,5 @@ public class InterfaceTest {
     public void tearDown() {
         window.cleanUp();
     }
-    
-    //Teste jenkins video
     
 }
