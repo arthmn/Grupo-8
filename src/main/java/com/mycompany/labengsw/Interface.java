@@ -36,7 +36,7 @@ public class Interface extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setLocationByPlatform(true);
+        setLocation(new java.awt.Point(0, 0));
 
         bttnCarregar.setText("Carregar");
         bttnCarregar.setToolTipText("");
@@ -58,9 +58,9 @@ public class Interface extends javax.swing.JFrame {
         panelImgLayout.setHorizontalGroup(
             panelImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelImgLayout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+                .addContainerGap(29, Short.MAX_VALUE)
                 .addComponent(lblMsgImg)
-                .addGap(39, 39, 39))
+                .addGap(28, 28, 28))
         );
         panelImgLayout.setVerticalGroup(
             panelImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,45 +84,51 @@ public class Interface extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
+                        .addGap(146, 146, 146)
                         .addComponent(bttnCarregar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(bttnProcessar))
-                    .addComponent(panelImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(103, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(panelImg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(33, 33, 33)
                 .addComponent(panelImg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bttnCarregar)
                     .addComponent(bttnProcessar))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(53, 53, 53))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    File file;
+    String path;
+    
     private void bttnCarregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnCarregarActionPerformed
+        // TODO add your handling code here:
         JFileChooser fc = new JFileChooser();
         fc.addChoosableFileFilter(new ImageFilter());
         fc.setAcceptAllFileFilterUsed(false);
         if (evt.getSource().equals(bttnCarregar)) { 
             int returnVal = fc.showOpenDialog(Interface.this);
             if (returnVal == JFileChooser.APPROVE_OPTION) {
-                File file = fc.getSelectedFile();
+                file = fc.getSelectedFile();
+                path = fc.getSelectedFile().getAbsolutePath();
                 if (file == null) {
                     lblMsgImg.setText("Erro ao carregar imagem");
                     lblMsgImg.setForeground(Color.RED);
                     return;
                 } 
-                // Corrigir
                 String extension = Utils.getExtension(file);
                 if (!Utils.extensaoPermitida(extension)) {
                     lblMsgImg.setText("Arquivo de formato inválido! Selecione uma imagem");
@@ -141,7 +147,12 @@ public class Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bttnCarregarActionPerformed
 
-
+    
+    public void addListenerBttnProcessar(java.awt.event.ActionListener listener) {
+        bttnProcessar.addActionListener(listener);
+    }
+    /*    */
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bttnCarregar;
     private javax.swing.JButton bttnProcessar;

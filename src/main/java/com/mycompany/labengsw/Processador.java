@@ -10,4 +10,9 @@ package com.mycompany.labengsw;
  */
 public class Processador {
     
+    Integer[] var;
+    
+    public Integer[] calcularMatriz(String path) {
+        return var;
+    }
 }

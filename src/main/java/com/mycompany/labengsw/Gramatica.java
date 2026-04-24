@@ -8,6 +8,9 @@ package com.mycompany.labengsw;
  *
  * @author Arthur
  */
+
+// https://github.com/galaxykate/tracery
+
 public class Gramatica {
     
 }

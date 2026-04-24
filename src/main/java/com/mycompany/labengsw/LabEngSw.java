@@ -30,6 +30,11 @@ public class LabEngSw {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Interface().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> { 
+            Interface view = new Interface();
+            Controlador controller = new Controlador(view);
+            view.setVisible(true);
+        });
+                
     }
 }
